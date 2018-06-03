@@ -1,0 +1,3 @@
+#!/bin/sh
+[ "$1" = "-f" ] && rm /run/motd*
+run-parts /etc/update-motd.d > /run/motd.dynamic

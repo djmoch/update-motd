@@ -1,0 +1,2 @@
+#!/bin/sh
+[ -x /usr/bin/fortune ] && echo && /usr/bin/fortune

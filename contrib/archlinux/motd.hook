@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Updating motd
+When = PostTransaction
+Exec = /etc/update-motd -f
