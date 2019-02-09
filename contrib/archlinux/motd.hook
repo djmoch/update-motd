@@ -7,4 +7,4 @@ Target = *
 [Action]
 Description = Updating motd
 When = PostTransaction
-Exec = /etc/update-motd -f
+Exec = /usr/lib/update-motd/update-motd -f

@@ -1,0 +1,6 @@
+[Unit]
+Description=Dynamic MOTD updater service
+
+[Service]
+Type=oneshot
+ExecStart= /usr/lib/update-motd/update-motd

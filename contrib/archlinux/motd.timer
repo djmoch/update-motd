@@ -1,0 +1,10 @@
+[Unit]
+Description=Dynamic MOTD updater timer
+
+[Timer]
+OnActiveSec=1m
+OnUnitActiveSec=1h
+Persistent=yes
+
+[Install]
+WantedBy=timers.target
