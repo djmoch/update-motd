@@ -1,0 +1,18 @@
+#!/bin/sh
+out=/run/motd.slackpkg
+script=slackpkg\ check-updates
+
+if [ -f "$out" ]
+then
+    echo
+    cat $out
+    lastrun=`stat -c %Y "$out"` || lastrun=0
+    expiration=`expr $lastrun + 3600`
+
+    if [ `date +%s` -ge $expiration ]
+    then
+        $script > "$out" &
+    fi
+else
+    $script > "$out" &
+fi

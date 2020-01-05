@@ -1,2 +1,7 @@
 #!/bin/sh
-[ -x /usr/bin/fortune ] && echo && /usr/bin/fortune
+[ -d /usr/games ] && PATH=/usr/games:$PATH
+if type fortune > /dev/null 2>&1
+then
+	echo
+	fortune
+fi
